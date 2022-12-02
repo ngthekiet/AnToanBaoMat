@@ -1,0 +1,291 @@
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    /* header */
+    .header__navbar-logo-img{
+        height: 40px;
+
+    }
+    .header__navbar-item-title{
+        font-size: 2rem;
+    }
+    .header__navbar-item-help{
+        font-size: 1.2rem;
+    }
+    /* form register */
+    .form__container{
+        /*width: 350px;*/
+        /*flex-direction: column;*/
+        /*top: 10%;*/
+        /*right: 3%;*/
+    }
+    .btn.btn--facebook{
+        min-width: 110px;
+    }
+    .btn.btn--google{
+        min-width: 110px;
+    }
+
+
+
+}
+
+/* Form Register */
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    /* form login */
+    .main-modal{
+        /*padding: 10% 20% 10% 28%;*/
+    }
+    .form__container{
+        position: relative;
+        right: 15%;
+        top: 0;
+
+
+    }
+
+
+
+}
+
+/* tablet width >1024px */
+@media screen and (min-width: 64em) {
+
+
+
+}
+
+/*Mobile AND Tablet with <1024px*/
+@media screen and (width: 64em){
+    .form__container{
+        /*height: 500px;*/
+        /*top: 1%;*/
+
+    }
+    .footer{
+        padding-left: 5rem;
+    }
+
+
+}
+/* =414px */
+@media only screen and (width:25.875em)  {
+    .main-modal{
+        /*padding: 10%;*/
+    }
+    .form__container{
+        width: 435px;
+        right: 13%;
+        top: 0;
+        position: relative;
+    }
+    .form__controls-info-link{
+        margin: 0 12px;
+    }
+    .part {
+        width: 50%;
+    }
+    /* RePassword */
+    .main-modal-repass{
+
+        height: 375px;
+    }
+    .form__container-repass{
+        width: 390px;
+    }
+    .form__header__heading-text-repass{
+        margin-left: 60px;
+    }
+    /* confirm pass */
+    .main-modal-confirm{
+        width: 400px;
+    }
+    .form__container-confirm{
+        width: 400px;
+        border: none;
+    }
+    .form__header__heading-confirm-text{
+        margin-left: 50px;
+    }
+    /* setup pass */
+    .note{
+        display: block;
+        margin-left: 22px;
+    }
+    .form__header__heading-setup-text{
+        margin-left: 85px;
+    }
+
+
+
+
+    /* 320px */
+}
+@media only screen and (width:20em)  {
+    .main-modal{
+        /*padding: 0;*/
+    }
+    .form__container{
+        /*right: 20px;*/
+        width: 350px;
+        top: 0;
+        position: relative;
+    }
+    .form__controls-info-link{
+        margin: 0 12px;
+    }
+    .part{
+        width: 50%;
+    }
+    /* repassword */
+    .header__navbar-item-title{
+        font-size: 1.6rem;
+    }
+
+
+    .main-modal-repass{
+        height: 340px;
+    }
+    .form__container-repass{
+        width: 300px;
+    }
+    .form__header__heading-text-repass{
+        margin-left: 30px;
+    }
+    /* confirm pass */
+    .main-modal-confirm{
+        height: 430px;
+
+    }
+    .form__container-confirm{
+        width: 310px;
+        border: none;
+    }
+    .form__header__heading-confirm-text{
+        margin-left: 15px;
+    }
+    .confirm-text__heading{
+        font-size: 1.3rem;
+        margin-left: -20px;
+        margin-right: -16px;
+    }
+    /* setup pass */
+    .form__container-confirm{
+        width: 325px;
+    }
+    .form__header__heading-setup-text{
+        margin-left: 50px;
+    }
+    .enter-newpass input{
+        min-width: 235px;
+    }
+
+    .note{
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .btn.btn--size-large{
+        min-width: 235px;
+    }
+    /*footer*/
+    .footer__heading{
+        font-size: 1.2rem;
+    }
+    .footer-item__link{
+        font-size: 1rem;
+    }
+
+
+}
+/*X  375*/
+@media only screen and (width:23.4375em)  {
+    /* login */
+    .main-modal{
+        /*padding: 5%;*/
+
+    }
+
+    .form__container{
+        position: relative;
+        width: 390px;
+        right: 12%;
+        top: 0;
+        /* width: 350px;
+        flex-direction: column;
+        top: 6%;
+        right: 42%; */
+    }
+    .part{
+        width: 50%;
+    }
+    /* re password */
+    .main-modal-repass{
+        height: 355px;
+    }
+    .form__container-repass{
+        width: 354px;
+    }
+    .form__header__heading-text-repass{
+        margin-left: 50px;
+
+    }
+    /* confirm pass */
+    .main-modal-confirm{
+        height: 460px;
+    }
+    .form__container-confirm{
+        width: 365px;
+        border: none;
+
+    }
+    .form__header__heading-confirm-text{
+        margin-left: 50px;
+    }
+    /* setup pass */
+    .form__header__heading-setup-text{
+        margin-left: 66px;
+    }
+    .enter-newpass input{
+
+        min-width: 300px;
+    }
+    .note{
+        display: block;
+        margin-left: -8px;
+    }
+    .btn.btn--size-large{
+        min-width: 300px;
+    }
+
+
+
+
+
+}
+/* width =600px */
+@media only screen and (width:37.5em)  {
+
+    /* login */
+    .main-modal{
+        /*padding: 5%;*/
+    }
+    .form__container{
+        /*position: relative;*/
+
+    }
+    /* register */
+    .btn.btn--google-register{
+        min-width: 130px;
+    }
+    .btn.btn--facebook-register{
+        min-width: 130px;
+    }
+    .footer{
+        padding-left: 9rem;
+    }
+
+
+
+}

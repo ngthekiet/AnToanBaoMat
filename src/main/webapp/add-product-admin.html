@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-admin.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Add Products</title>
+</head>
+
+<body class="body_index">
+<div class="container_index">
+    <div class="frame_index">
+        <div class="index_header">
+            <div class="index_header-frame">
+                <div class="index_logo-search">
+                    <a href="#">
+                        <img src="./images/imgLogo/logo2.png" alt="">
+                    </a>
+                    <div class="index_buttonMenu">
+                        <label for="index_menu-checkbox">
+                            <i class="far fa-arrow-alt-circle-left fa-2x"></i>
+                        </label>
+                    </div>
+                    <div class="index_search">
+                        <div class="index_searchFrame">
+                            <input id="index_inputSearch-frame" class="index_buttonSearch" type="text"
+                                   placeholder="Search" autofocus="autofocus">
+                            <div id="index_buttonSearch-frame" class="index_buttonSearch">
+                                <button>
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index_navbar">
+                    <ul class="index_navbarFrame">
+                        <li id="index_navbar-notifi" class="index_navbarItems">
+                            <a href="#">
+                                <i class="far fa-bell fa-2x"></i>
+                            </a>
+                        </li>
+                        <li id="index_navbar-user" class="index_navbarItems">
+                            <input id="index_navbarInput" type="checkbox">
+                            <label id="index_navbar-label" for="index_navbarInput">
+                                <img class="index_navbar-userItems" src="./images/imgIcons/avatar.png" alt="">
+                                <span class="index_navbar-userItems">Username</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </label>
+                            <ul id="index_navbar-checked" class="index_navbar-child">
+                                <li class="index_navbar-list">
+                                    <a href="#">
+                                        <i class="far fa-user"></i>
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                                <li class="index_navbar-list">
+                                    <a href="#">
+                                        <i class="far fa-envelope"></i>
+                                        <span>Message</span>
+                                    </a>
+                                </li>
+                                <li class="index_navbar-list">
+                                    <a href="#">
+                                        <i class="fas fa-cog"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                </li>
+                                <li class="index_navbar-list">
+                                    <a href="#">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="index_content">
+            <div class="index_content-frame">
+                <input id="index_menu-checkbox" type="checkbox">
+                <div id="index_menu-block" class="index_menu">
+                    <div class="index_menu-frame">
+                        <div class="index_menu-list">
+                            <a href="./index-admin.html">
+                                <i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </div>
+                        <div class="index_menu-list">
+                            <a href="#">
+                                <i class="fas fa-clone"></i>
+                                <span>Posts</span>
+                            </a>
+                        </div>
+                        <div id="index_menu-addProduct" class="index_menu-list">
+                            <a href="#">
+                                <i class="fas fa-box-open"></i>
+                                <span>Add Product</span>
+                            </a>
+                        </div>
+                        <div class="index_menu-list">
+                            <a href="#">
+                                <i class="fas fa-box"></i>
+                                <span>Product</span>
+                            </a>
+                        </div>
+                        <div class="index_menu-list">
+                            <a href="#">
+                                <i class="fas fa-table"></i>
+                                <span>Table</span>
+                            </a>
+                        </div>
+                        <div class="index_menu-list">
+                            <a href="#">
+                                <i class="fas fa-comment-alt"></i>
+                                <span>Feedback</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="index_dataID" class="index_data">
+                    <div class="index_date-frame">
+                        <div id="index_clearID" class="index_clear"></div>
+                        <div id="index_data-contentID" class="home_data-content">
+                            <div class="addpro_product-list">
+                                <div id="addpro_product-name" class="addpro_product-items">
+                                    <div class="addpro-productTitle">Tên sản phẩm</div>
+                                    <div class="addpro_product-selectFrame">
+                                        <input class="addpro-productInput selectFrame" type="text">
+                                    </div>
+                                </div>
+                                <div id="addpro_product-price" class="addpro_product-items">
+                                    <div class="addpro-productTitle">Giá bán</div>
+                                    <div class="addpro_product-selectFrame">
+                                        <input class="addpro-productInput selectFrame" type="number">
+                                    </div>
+                                </div>
+                                <div id="addpro_product-color" class="addpro_product-items">
+                                    <div class="addpro-productTitle">Màu</div>
+                                    <div class="addpro_product-selectFrame">
+                                        <input class="selectFrame selectText" type="text">
+                                        <select class="addpro-productSelect selectFrame" name="color" id="listColor">
+                                            <option value="0">Select</option>
+                                            <option value="1">Color 1</option>
+                                            <option value="2">Color 2</option>
+                                            <option value="3">Color 3</option>
+                                            <option value="4">Color 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="addpro_product-memory" class="addpro_product-items">
+                                    <div class="addpro-productTitle">Dung lượng</div>
+                                    <div class="addpro_product-selectFrame">
+                                        <input class="selectFrame selectText" type="text">
+                                        <select class="addpro-productSelect selectFrame" name="memory" id="listMemory">
+                                            <option value="0">Select</option>
+                                            <option value="1">Memory 1</option>
+                                            <option value="2">Memory 2</option>
+                                            <option value="3">Memory 3</option>
+                                            <option value="4">Memory 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="addpro_product-category" class="addpro_product-items">
+                                    <div class="addpro-productTitle">Danh mục sản phẩm</div>
+                                    <div class="addpro_product-selectFrame">
+                                        <input class="selectFrame selectText" type="text">
+                                        <select class="addpro-productSelect selectFrame" name="category"
+                                                id="listCategory">
+                                            <option value="0">Select</option>
+                                            <option value="1">Danh mục 1</option>
+                                            <option value="2">Danh mục 2</option>
+                                            <option value="3">Danh mục 3</option>
+                                            <option value="4">Danh mục 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="addpro_product-description" class="addpro_product-items">
+                                    <div class="addpro-productTitle">Mô tả</div>
+                                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                                </div>
+                                <div id="addpro_product-images" class="addpro_product-items">
+                                    <div class="addpro-productTitle">Thêm hình ảnh</div>
+                                    <input type="file">
+                                </div>
+                                <div id="addpro_product-add" class="addpro_product-items">
+                                    <button class="addpro_product-submit" type="submit">Thêm sản phẩm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

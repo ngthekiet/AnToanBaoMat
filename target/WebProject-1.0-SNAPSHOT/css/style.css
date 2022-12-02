@@ -1,0 +1,1551 @@
+/* Định dạng tất cả ul và a */
+ul {
+    padding: 0em;
+    margin: 0em;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header page */
+#web_header {
+    position: sticky;
+    max-width: 120em;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    z-index: 10;
+}
+
+/* Logo shop */
+#web_logo {
+    width: 20%;
+    text-align: center;
+}
+
+/* Menu & bar */
+#web_bar {
+    width: 80%;
+    text-align: center;
+}
+
+#bar-top {
+    height: 50%;
+    display: flex;
+}
+
+/* menu */
+#bar-menu {
+    width: 70%;
+}
+
+#bar-menu ul {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0.7em;
+    display: flex;
+}
+
+#bar-menu ul li {
+    width: 25%;
+}
+
+#bar-menu ul li a {
+    line-height: 2em;
+    color: white;
+}
+
+#bar-menu ul li a:hover {
+    color: tomato;
+}
+
+/* Liên hệ */
+#bar-iconSupport {
+    width: 30%;
+    font-size: 150%;
+}
+
+#bar-iconSupport ul {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0.7em;
+    display: flex;
+    justify-content: center;
+}
+
+#bar-iconSupport ul li {
+    width: 15%;
+}
+
+#bar-iconSupport ul li a {
+    color: white;
+}
+
+#bar-iconSupport ul li a .fb:hover {
+    color: blue;
+}
+
+#bar-iconSupport ul li a .twi:hover {
+    color: cyan;
+}
+
+#bar-iconSupport ul li a .ins:hover {
+    color: palevioletred;
+}
+
+#bar-bottom {
+    height: 50%;
+    display: flex;
+}
+
+/* Nút home */
+#bar-iconHome {
+    width: 10%;
+    color: white;
+    font-size: 150%;
+    line-height: 2em;
+}
+
+#bar-iconHome div a {
+    color: white;
+}
+
+#bar-iconHome div a i:hover {
+    color: tomato;
+}
+
+/* Tìm kiếm */
+#bar-frameSearch {
+    width: 60%;
+    height: 3em;
+}
+
+#bar-frameSearch > div {
+    width: 80%;
+    height: 2em;
+    margin: 0em auto;
+    background-color: #b9b9b9;
+    border-radius: 0.8em;
+    margin-top: 0.5em;
+    display: flex;
+}
+
+#bar-search {
+    width: 80%;
+    height: 100%;
+}
+
+#bar-searchInput {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-indent: 1em;
+    height: 100%;
+}
+
+#bar-buttonSearch {
+    width: 20%;
+}
+
+#bar-buttonSearch > div {
+    height: 100%;
+}
+
+#bar-buttonSearch button {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8em;
+    border-left: solid 0.125em black;
+    cursor: pointer;
+}
+
+#bar-buttonSearch button:hover {
+    background-color: white;
+    opacity: 80%;
+}
+
+/* Sign up & giỏ hàng */
+#bar_bag-user {
+    width: 30%;
+    font-size: 150%;
+    display: flex;
+}
+
+#bar-bagUser {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#user {
+    position: absolute;
+    background-color: white;
+    text-align: left;
+    border-radius: 10px;
+    min-width: 150px;
+    min-height: 100px;
+    left: -30px;
+    display: none
+}
+
+#bar-user {
+    width: 15%;
+    margin: 0.5em 0em;
+}
+
+#bar-bag {
+    width: 15%;
+    margin: 0.5em 0em;
+}
+
+.user-bag-icons {
+    color: white;
+}
+
+#user-login:hover {
+    cursor: pointer;
+}
+
+.nav-list-login {
+    color: black;
+    padding-left: 10px;
+}
+
+.navbar-list {
+    padding-top: 10px;
+}
+
+.navbar-list:last-child {
+    padding-bottom: 10px;
+}
+
+#bar-bagUser a:hover {
+    color: tomato;
+}
+
+#bar-childMenu {
+    width: 0%;
+    display: none;
+    cursor: pointer;
+}
+
+#bar-childMenu i {
+    width: 100%;
+    color: white;
+    display: block;
+    width: 50%;
+    margin: 0.6em 25%;
+}
+
+#bar-childMenu i:hover {
+    color: tomato;
+}
+
+/* Mobile-nền mờ */
+#bar-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.3s;
+}
+
+/* Mobile-menu */
+#bar-nav-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    max-width: 100%;
+    min-width: 20em;
+    background-color: white;
+    font-size: 1.2rem;
+    transform: translateX(100%);
+    transition: transform linear 0.3s;
+
+}
+
+/* Mobile-nút close */
+#bar-mobile-close {
+    width: 20%;
+    height: 1.5em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 120%;
+}
+
+#bar-mobile-close i {
+    cursor: pointer;
+}
+
+#bar-mobile-close i:hover {
+    color: tomato;
+}
+
+/* Danh sách menu */
+#bar-nav-mobile-list {
+    margin: 3em auto;
+    width: 50%;
+}
+
+.bar-nav-mobile-link {
+    color: black;
+    display: block;
+    padding: 0.5em 0em;
+}
+
+.bar-nav-mobile-link:hover {
+    color: tomato;
+}
+
+.bar-iconSignout {
+    font-size: 120%;
+    padding-right: 0.5em;
+}
+
+#bar-nav-checkbox {
+    display: none;
+}
+
+#bar-nav-checkbox:checked ~ #bar-overlay {
+    display: block;
+}
+
+#bar-nav-checkbox:checked ~ #bar-nav-mobile {
+    transform: translateX(0%);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* End header page */
+
+/* Start footer page */
+#web_footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #323232;
+    margin-top: 5%;
+}
+
+#footer_container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.footer-part {
+    width: 25%;
+}
+
+.footer-part h3 {
+    color: white;
+}
+
+.footer-partList {
+    padding: 0.5em 0;
+}
+
+.footer-partList a {
+    color: white;
+}
+
+.footer-partList a:hover {
+    color: #1f8cfe;
+}
+
+#web_author {
+    width: 100%;
+    background-color: #323232;
+}
+
+#author_container {
+    width: 85%;
+    margin: 0 auto;
+    border-top: solid 0.0625em #666666;
+    padding: 2% 0;
+}
+
+#author-info {
+    width: 100%;
+}
+
+#author-info p {
+    margin: 0;
+    padding: 0;
+    color: #666666;
+}
+
+/* End footer page */
+
+/* Start page HOME */
+#body_home {
+    width: 100vw;
+    height: 100vh;
+    margin: 0em auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    overflow-x: hidden;
+}
+
+/* Khung frame */
+#home_frame {
+    width: 100%;
+    max-width: 120em;
+    margin: 0em auto;
+}
+
+/* Khung chứa all */
+#home_container {
+    width: 100%;
+    margin: 0em auto;
+}
+
+/* Phần quảng cáo */
+#home_category {
+    width: 85%;
+    margin: 0em auto;
+    padding-top: 1%;
+}
+
+#category {
+    width: 100%;
+    margin: 0em auto;
+    display: flex;
+}
+
+/* Danh mục sản phẩm */
+#category_product {
+    width: 20%;
+    border-radius: 0.625em;
+    box-shadow: 0em 0em 0.625em 0em #888888;
+    position: relative;
+}
+
+#category_frame-product {
+    width: 100%;
+    height: 100%;
+}
+
+#category_conatiner-product {
+    width: 100%;
+    height: 100%;
+}
+
+.category-menu {
+    display: block;
+    height: 16.67%;
+    border-radius: 0.625em;
+}
+
+.category-menu:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: linear 0.3s;
+}
+
+.category-menu > a {
+    display: flex;
+    width: 100%;
+    color: black;
+    height: 80%;
+    padding: 1.5% 0;
+}
+
+.category-menu img {
+    width: 15%;
+    padding-left: 5%;
+}
+
+.category-menu > a span {
+    display: inline-block;
+    padding-left: 10%;
+    width: 70%;
+    margin-top: 5%;
+}
+
+.category-menu > a i {
+    width: 15%;
+    margin-top: 5%;
+}
+
+/* Quang cao */
+#category_ads {
+    width: 60%;
+}
+
+#category_container-ads {
+    width: 96%;
+    height: 100%;
+    margin: 0 auto;
+    box-shadow: 0em 0em 0.5em 0em #888888;
+    border-radius: 0.3125em;
+}
+
+#category-adsImage {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 0.3125em 0.3125em 0em 0em;
+}
+
+#category-adsImage img {
+    width: 100%;
+}
+
+#category-title {
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+
+.category-adsList {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    border-radius: 0em 0em 0.3125em 0.3125em;
+}
+
+.category-adsList a {
+    width: 100%;
+    height: 100%;
+}
+
+.category-adsList:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: linear 0.3s;
+}
+
+.category-adsList a {
+    color: black;
+    display: block;
+    line-height: 1.5em;
+    padding-top: 5%;
+}
+
+.category-adsNode {
+    font-size: 80%;
+}
+
+/* Khuyen mai */
+#category_promotion {
+    width: 20%;
+    overflow-y: hidden;
+}
+
+.category_promotion-items {
+    width: 100%;
+    height: 34.5%;
+}
+
+.category_promotion-items img {
+    width: 100%;
+    height: 90%;
+    border-radius: 0.625em;
+}
+
+/* Danh sach san pham */
+#home_product {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#product_container {
+    width: 100%;
+}
+
+.product_frame {
+    width: 100%;
+    padding-top: 2%;
+}
+
+.product-name {
+    width: 100%;
+    text-align: center;
+    font-size: 300%;
+}
+
+.product-name a {
+    color: black;
+}
+
+.product-name a:hover {
+    color: #1f8cfe;
+}
+
+.product-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.load-more {
+    margin: 1.2em auto 0 auto;
+    width: 90%;
+}
+
+.load-more button {
+    display: inline-block;
+    background-color: chartreuse;
+    width: 6em;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 1em;
+    border: hidden;
+}
+
+.load-more button:hover {
+    color: #1f8cfe;
+    cursor: pointer;
+}
+
+.product-frameItems {
+    width: 20%;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.product-items {
+    display: block;
+    width: 80%;
+    box-shadow: 0em 0em 0.5em 0em #888888;
+    border-radius: 1em;
+    color: black;
+    margin: 0 auto;
+}
+
+.product-items:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: linear 0.3s;
+    transform: translateY(-5%);
+}
+
+.product-items > div {
+    padding: 7% 0;
+}
+
+.product-items > div div {
+    padding-top: 5%;
+}
+
+.product-items img {
+    width: 90%;
+}
+
+.product-nameItems {
+    font-size: 80%;
+    height: 25px;
+}
+
+.product-priceItems {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.product-buttonItems {
+    display: flex;
+}
+
+.input-click {
+    width: 30%;
+    display: inline-block;
+    border-radius: 3px;
+    margin: 5px;
+    line-height: 2em;
+    border: none;
+    color: white;
+}
+
+.input-click:hover {
+    cursor: pointer;
+}
+
+.input-pay {
+    background-color: #1f8cfe;
+}
+
+.input-cart {
+    background-color: tomato;
+}
+
+/* Mobile thanh menu */
+#mobile_category {
+    width: 100%;
+    background-color: #181818;
+    position: fixed;
+    bottom: 0;
+    display: none;
+}
+
+#mobile_category-frame {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mobile-menu {
+    width: 16.67%;
+    text-align: center;
+    font-size: 70%;
+}
+
+.mobile-menu:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: linear 0.3s;
+}
+
+.mobile-menu a {
+    color: white;
+    display: block;
+    padding: 15% 0;
+}
+
+/* End page HOME */
+
+/* Start page IPHONE */
+#body_iphone {
+    width: 100vw;
+    height: 100vh;
+    margin: 0em auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    overflow-x: hidden;
+}
+
+/* Khung iphone*/
+#iphone_container {
+    width: 100%;
+    max-width: 120em;
+    margin: 0em auto;
+}
+
+/* Khung chứa iphone */
+#iphone_frame {
+    width: 100%;
+    margin: 0em auto;
+}
+
+#iphone_frameLogo {
+    width: 100%;
+}
+
+#iphone-logo {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 250%;
+    margin-top: 2%;
+}
+
+#iphone-frameAds {
+    width: 100%;
+}
+
+#iphone-adsImg {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#iphone-adsImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625em;
+    margin-top: 2%;
+}
+
+#iphone_bar {
+    width: 100%;
+    margin-top: 2%;
+}
+
+#iphone_bar-container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#iphone_barList {
+    width: 80%;
+}
+
+#barList-container {
+    width: 100%;
+}
+
+#barList-frame {
+    display: flex;
+}
+
+.iphone-listItems {
+    padding-right: 5%;
+}
+
+.iphone_smalldevice {
+    display: none;
+}
+
+.iphone-listItems a {
+    color: black;
+    display: block;
+    height: 130%;
+    border-bottom: solid 2px transparent;
+}
+
+.iphone-listItems a:hover {
+    color: tomato;
+    border-bottom: solid 2px tomato;
+}
+
+.iphone-listItems:last-child {
+    padding-right: 0;
+}
+
+#iphone_sortList {
+    width: 20%;
+}
+
+#sortList-container {
+    width: 100%;
+}
+
+#sortList-items {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#iphone_product {
+    width: 100%;
+    margin-top: 1%;
+}
+
+#iphone_product-container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.iphone-productList {
+    width: 33%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.iphone-productItems {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.625em;
+    box-shadow: 0em 0em 0.625em 0em #888888;
+
+}
+
+.iphone-productItems:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+    transition: linear 0.3s;
+}
+
+.iphone-productImg {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+}
+
+.iphone-productItems-list {
+    color: black;
+}
+
+.iphone-productItems-list:last-child {
+    padding-bottom: 0;
+}
+
+.iphone-productItems-name {
+    font-size: 110%;
+    padding-bottom: 5%;
+}
+
+.iphone-productItems-price {
+    font-size: 150%;
+    padding-bottom: 5%;
+    font-weight: bold;
+}
+
+/* End page IPHONE */
+
+/* Start page Product */
+
+/* Thông tin sản phẩm */
+.product_info-items {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.product_info-itemsFrame {
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.product_info-left {
+    width: 50%;
+    border-right: solid #616162 0.0625em;
+    text-align: right;
+}
+
+.product_info-leftFrame {
+    width: 95%;
+    height: 100%;
+    margin-top: 0.5em;
+}
+
+.product_info-name {
+    width: 100%;
+    height: 80%;
+    margin-bottom: 5%;
+}
+
+.product_info-nameTop {
+    text-align: center;
+    height: 0%;
+    display: none;
+}
+
+.product_name-h3 {
+    font-size: 200%;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.product_name-h4 {
+    font-size: 150%;
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.product_info-name img {
+    width: 90%;
+    height: 100%;
+}
+
+.product_info-right {
+    width: 50%;
+    border-left: solid #616162 0.0625em;
+}
+
+.product_info-rightFrame {
+    width: 100%;
+    margin-left: 5%;
+}
+
+.product_info-rightFrame p {
+    margin: 0;
+    padding: 0;
+}
+
+.product_info-memory p {
+    font-size: 90%;
+    margin-top: 1em;
+}
+
+.product-memoryFrame {
+    display: flex;
+    margin-top: 0.5em;
+    flex-wrap: wrap;
+}
+
+.product-memory {
+    display: block;
+    border-radius: 0.625em;
+    background-color: #3e3e3f;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    color: white;
+    cursor: pointer;
+}
+
+.product_info-color p {
+    font-size: 90%;
+    margin-top: 1em;
+}
+
+.product-colorFrame {
+    display: flex;
+    margin-top: 0.5em;
+    flex-wrap: wrap;
+}
+
+#color-gray {
+    background-color: #54524f;
+}
+
+#color-gold {
+    background-color: #fae7cf;
+}
+
+#color-blue {
+    background-color: #a7c1d9;
+}
+
+#color-silver {
+    background-color: #f1f2ed;
+}
+
+.product-color {
+    display: block;
+    border-radius: 50%;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    background-color: #3e3e3f;
+    cursor: pointer;
+    font-size: 250%;
+}
+
+.product_button-buyBag {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    margin-top: 1em;
+    flex-wrap: wrap;
+}
+
+.product-buttonFrame {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    text-align: left;
+}
+
+.product-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 2.5em;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0.625em;
+}
+
+.product-button:hover {
+    transition: linear 0.3s;
+    transform: translateY(-5%);
+}
+
+#product-button-buy {
+    background-color: #1f8cfe;
+    font-size: 130%;
+    font-weight: bold;
+    color: white;
+}
+
+#product-button-bag {
+    color: white;
+    background-color: tomato;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.product_service {
+    margin-top: 1em;
+}
+
+.product_service-items {
+    padding-bottom: 0.5em;
+}
+
+.product-icons {
+    display: inline-block;
+    padding-right: 0.5em;
+}
+
+.product-linkColor {
+    color: #1f8cfe;
+}
+
+.product-linkColor:hover {
+    color: tomato;
+}
+
+.product-icons {
+    width: 1em;
+}
+
+.product_description {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.product_descriptionFrame {
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.product_description-left {
+    width: 70%;
+    border-radius: 0.625em;
+    box-shadow: 0em 0em 0.625em 0em #888888;
+}
+
+.product_description-left h3 {
+    border-left: solid 0.3125em black;
+}
+
+.product_descriptionName {
+    font-size: 150%;
+    padding-left: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.product_descriptionImg {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.product_description-left p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.product_description-right {
+    width: 30%;
+    height: 100%;
+    border-radius: 0.625em;
+    box-shadow: 0em 0em 0.625em 0em #888888;
+    margin-left: 2%;
+}
+
+.product_description-right h3 {
+    border-left: solid 0.3125em black;
+}
+
+.product_description-listInfo {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.product_description-list {
+    display: flex;
+    padding: 5% 0 5% 2%;
+    border-bottom: solid 0.0625em black;
+    font-size: 90%;
+}
+
+.product_description-list:last-child {
+    border-bottom: 0;
+}
+
+.product_description-listTitle {
+    width: 30%;
+    padding-right: 10%;
+    text-align: left;
+}
+
+.product_description-listName {
+    width: 70%;
+    text-align: left;
+}
+
+/* End page Product */
+
+/* Reponsive Mobile & Tablet */
+@media only screen and (max-width: 63.9375em) {
+
+    body {
+        overflow-y: hidden;
+    }
+
+    /* Start header page */
+    #web_logo img {
+        width: 4em;
+        height: 4em;
+    }
+
+    #bar-top {
+        display: none;
+    }
+
+    #bar-bottom {
+        padding-top: 0.7em;
+    }
+
+    #bar-bagUser {
+        width: 60%;
+    }
+
+    #bar-childMenu {
+        width: 40%;
+    }
+
+    #bar-user {
+        width: 50%;
+    }
+
+    #bar-bag {
+        width: 50%;
+    }
+
+    #bar-childMenu {
+        width: 50%;
+        display: block;
+    }
+
+    /* End header page */
+    /* Start footer page */
+    .footer-part {
+        width: 100%;
+        text-align: center;
+    }
+
+    #web_author {
+        padding-bottom: 15%;
+    }
+
+    #author-info {
+        text-align: center;
+    }
+
+    #mobile_category {
+        display: block;
+    }
+
+    /* End footer page */
+    /* Start page HOME */
+    #category_product {
+        display: none;
+    }
+
+    #category_ads {
+        width: 100%;
+    }
+
+    #category_promotion {
+        display: none;
+    }
+
+    .product-frameItems {
+        width: 50%;
+        padding: 3% 0;
+    }
+
+    /* End page HOME */
+    /* Start page IPHONE */
+    #iphone_bar-container {
+        flex-direction: column;
+    }
+
+    #iphone_barList {
+        width: 100%;
+    }
+
+    .iphone-listItems {
+        display: block;
+        width: 20%;
+        font-size: 80%;
+        padding-right: 0;
+        height: 100%;
+    }
+
+    .iphone-listItems a {
+        color: white;
+        width: 90%;
+        border: none;
+        display: block;
+        text-align: center;
+        line-height: 300%;
+        border-radius: 0.625em;
+        box-shadow: 0em 0em 0.625em 0em #888888;
+        background-color: #323232;
+    }
+
+    .iphone-listItems a:hover {
+        border: none;
+        color: black;
+        background-color: rgba(0, 0, 0, 0.2);
+        transition: linear 0.3s;
+    }
+
+    #iphone_sortList {
+        margin-top: 2%;
+        width: 100%;
+        text-align: right;
+    }
+
+    .iphone-productItems-name {
+        font-size: 100%;
+    }
+
+    .iphone-productItems-price {
+        font-size: 110%;
+    }
+
+    .iphone-listItems:last-child {
+        width: 18%;
+    }
+
+    .iphone-listItems:last-child a {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    /* Start page IPHONE */
+    /* Start page Product */
+    .product_info-itemsFrame {
+        flex-direction: column;
+    }
+
+    .product_info-left {
+        border: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .product_info-leftFrame {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .product_info-nameTop {
+        width: 85%;
+        display: block;
+        height: 15%;
+        margin: 0 auto;
+    }
+
+    .product_info-name img {
+        display: block;
+        width: 85%;
+        height: 85%;
+        margin: 0 auto;
+    }
+
+    .product_info-right {
+        border: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .product_info-rightFrame {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .product_info-nameBottom {
+        display: none;
+    }
+
+    .product_info-memory {
+        width: 100%;
+    }
+
+    .div-items {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .product_button-buyBag {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 5vh;
+        position: fixed;
+        top: 95vh;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    .product-buttonFrame button {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .product-buttonFrame button:hover {
+        transform: none;
+    }
+
+    .product_descriptionFrame {
+        flex-direction: column-reverse;
+    }
+
+    .product_description-left {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .product_description-right {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Start page Product */
+}
+
+/* Small Mobile */
+@media only screen and (max-width: 28.125em) {
+
+    /* Start header */
+    #bar-frameSearch {
+        width: 50%;
+    }
+
+    #bar_bag-user {
+        width: 40%;
+    }
+
+    #bar-bagUser {
+        width: 60%;
+    }
+
+    #bar-childMenu {
+        width: 40%;
+    }
+
+    #bar-user {
+        width: 50%;
+    }
+
+    #bar-bag {
+        width: 50%;
+    }
+
+    /* End header */
+    /* Start page HOME */
+    .mobile-menu div {
+        display: none;
+    }
+
+    .product-frameItems {
+        width: 100%;
+        padding: 3% 0;
+    }
+
+    #category_ads {
+        width: 100%;
+        height: 100%;
+    }
+
+    #category-title {
+        display: none;
+    }
+
+    /* End page HOME */
+    /* Start page IPHONE */
+    .iphone_bigdevice {
+        display: none;
+    }
+
+    .iphone_smalldevice {
+        display: block;
+    }
+
+    .iphone-productList {
+        width: 100%;
+    }
+
+    /* End page IPHONE */
+}
+
+/* Reponsive Mobile */
+@media only screen and (min-width: 28.125em) and (max-width: 46.1875em) {
+    /* Start header page */
+    #bar-nav-mobile {
+        width: 100%;
+    }
+
+    #bar-user {
+        width: 50%;
+    }
+
+    .navbar-list {
+        color: black;
+    }
+
+    #user:hover {
+        cursor: pointer;
+    }
+
+    .navbar-list:hover {
+        color: tomato;
+        cursor: pointer;
+    }
+
+    #bar-bag {
+        width: 50%;
+    }
+
+    /* End header page */
+    /* Start page HOME */
+    #category_ads {
+        width: 100%;
+        height: 100%;
+    }
+
+    #category-title {
+        display: none;
+    }
+
+    /* End page HOME */
+    /* Start page IPHONE */
+    .iphone-productList {
+        width: 50%;
+    }
+
+    /* End page IPHONE */
+
+}
+
+/* Reponsive Tablet */
+@media only screen and(min-width: 46.25em) and (max-width: 63.9375em) {
+    /* Start header page */
+    #bar-nav-mobile {
+        width: 30%;
+    }
+
+    #bar-user {
+        width: 50%;
+    }
+
+    #bar-bag {
+        width: 50%;
+    }
+
+    /* End header page */
+} 
