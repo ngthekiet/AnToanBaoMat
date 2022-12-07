@@ -121,4 +121,13 @@ public class UserDao {
             return handle.createQuery("select * from user where username = ?").bind(0, username).mapToBean(User.class).first();
         });
     }
+
+    public void changePublicKey(String publicKey, String username) {
+        JDBIConnector.getJdbi().withHandle(handle -> {
+            return handle.createUpdate("update user set public_key = ? where username = ?")
+                    .bind(0, publicKey)
+                    .bind(1, username)
+                    .execute();
+        });
+    }
 }

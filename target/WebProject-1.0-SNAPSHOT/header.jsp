@@ -109,9 +109,9 @@
                                     </li>
                                 </c:if>
                                 <li class="navbar-list">
-                                    <a class="nav-list-login" href="#">
+                                    <a class="nav-list-login" href="/WebProject/setting-security.jsp">
                                         <i class="fas fa-cog"></i>
-                                        <span>Settings</span>
+                                        <span>Bảo mật</span>
                                     </a>
                                 </li>
                                 <li class="navbar-list">

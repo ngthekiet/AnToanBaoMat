@@ -1,0 +1,49 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc;
+    margin: 0;
+}
+
+#security-frame{
+    width: 80em;
+    height: 30em;
+    margin: 2em auto 0em auto;
+    border: solid 2px black;
+    border-radius: 2em;
+    background-color: white;
+}
+
+#security-title{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#security-content{
+    display: flex;
+}
+
+#content-left, #content-right{
+    width: 50%;
+    text-align: center;
+}
+
+#content-left{
+    border-right: solid 1px black;
+}
+
+#content-right{
+    border-left: solid 1px black;
+}
+
+#public-key, #private-key{
+    width: 90%;
+    height: 200px;
+}
+
+#open-key, .security-button{
+    display: block;
+    margin: 10px auto;
+}

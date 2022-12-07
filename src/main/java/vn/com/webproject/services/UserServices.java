@@ -43,5 +43,7 @@ public class UserServices {
         return UserDao.getInstance().getByUsername(username);
     }
 
-
+    public void changePublicKey(String publicKey, String username){
+        UserDao.getInstance().changePublicKey(publicKey, username);
+    }
 }
