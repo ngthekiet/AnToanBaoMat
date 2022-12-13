@@ -74,13 +74,4 @@ public class RSA {
     public KeyPair getKeyPair() {
         return keyPair;
     }
-
-    public static void main(String[] args) {
-        RSA rsa = new RSA();
-        rsa.createKey();
-        byte[] en = rsa.encrypt("Đây là con heo mập");
-        String de = rsa.decrypt(en);
-        System.out.println("En:\n" + en);
-        System.out.println("De:\n" + de);
-    }
 }
