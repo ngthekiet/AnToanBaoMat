@@ -5,6 +5,9 @@
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
 %>
+<%
+    String yourkey = (String) request.getAttribute("yourkey");
+%>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -34,8 +37,18 @@
             </div>
             <div id="content-right">
                 <h3>Yêu cầu cấp khóa mới</h3>
+                <%
+                    if (yourkey != null) {
+                %>
+                <textarea id="private-key" readonly><%=yourkey%></textarea>
+                <%
+                } else {
+                %>
                 <textarea id="private-key" readonly></textarea>
-                <button class="security-button">Get Key</button>
+                <%
+                    }
+                %>
+                <a href="getKey?uid=${auth.username}" class="security-button">Get Key</a>
                 <button class="security-button">Save Key</button>
             </div>
         </div>

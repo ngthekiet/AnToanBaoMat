@@ -7,12 +7,21 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 
 public class RSA {
-    PrivateKey privateKey;
-    PublicKey publicKey;
-    KeyPair keyPair;
+    private PrivateKey privateKey;
+    private PublicKey publicKey;
+    private KeyPair keyPair;
+
+    private static RSA instance;
 
     public RSA() {
+        createKey();
+    }
 
+    public static RSA getInstance() {
+        if (instance == null) {
+            instance = new RSA();
+        }
+        return instance;
     }
 
     public void createKey() {
@@ -54,12 +63,15 @@ public class RSA {
         }
     }
 
-    public static void main(String[] args) {
-        RSA rsa = new RSA();
-        rsa.createKey();
-        byte[] en = rsa.encrypt("Đây là con heo mập");
-        String de = rsa.decrypt(en);
-        System.out.println("En:\n" + en);
-        System.out.println("De:\n" + de);
+    public PrivateKey getPrivateKey() {
+        return privateKey;
+    }
+
+    public PublicKey getPublicKey() {
+        return publicKey;
+    }
+
+    public KeyPair getKeyPair() {
+        return keyPair;
     }
 }

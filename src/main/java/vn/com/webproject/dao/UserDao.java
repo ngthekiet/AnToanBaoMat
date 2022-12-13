@@ -7,6 +7,7 @@ import vn.com.webproject.db.JDBIConnector;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -119,15 +120,6 @@ public class UserDao {
     public User getByUsername(String username) {
         return JDBIConnector.getJdbi().withHandle(handle -> {
             return handle.createQuery("select * from user where username = ?").bind(0, username).mapToBean(User.class).first();
-        });
-    }
-
-    public void changePublicKey(String publicKey, String username) {
-        JDBIConnector.getJdbi().withHandle(handle -> {
-            return handle.createUpdate("update user set public_key = ? where username = ?")
-                    .bind(0, publicKey)
-                    .bind(1, username)
-                    .execute();
         });
     }
 }

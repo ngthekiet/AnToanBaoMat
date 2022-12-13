@@ -3,6 +3,7 @@ package vn.com.webproject.services;
 import vn.com.webproject.beans.User;
 import vn.com.webproject.dao.UserDao;
 
+import java.security.PublicKey;
 import java.util.List;
 
 public class UserServices {
@@ -41,9 +42,5 @@ public class UserServices {
 
     public User getByUsername(String username) {
         return UserDao.getInstance().getByUsername(username);
-    }
-
-    public void changePublicKey(String publicKey, String username){
-        UserDao.getInstance().changePublicKey(publicKey, username);
     }
 }
