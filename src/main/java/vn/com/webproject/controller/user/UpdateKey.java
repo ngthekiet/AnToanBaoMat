@@ -16,9 +16,5 @@ public class UpdateKey extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String publicKey = request.getParameter("publicKey");
-        String username = request.getParameter("username");
-        UserServices.getInstance().changePublicKey(publicKey,username);
-        response.sendRedirect("/WebProject/setting-security.jsp");
     }
 }
