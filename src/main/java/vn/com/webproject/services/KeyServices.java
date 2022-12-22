@@ -15,7 +15,11 @@ public class KeyServices {
         return instance;
     }
 
-    public void changePublicKey(String publicKey, String username) {
-        KeyDao.getInstances().changePublicKey(publicKey, username);
+    public boolean changePublicKey(String publicKey, String username, String password) {
+        return KeyDao.getInstances().changePublicKey(publicKey, username, password);
+    }
+
+    public boolean updatePublicKey(String publicKey, String username, String password) {
+        return KeyDao.getInstances().updatePublicKey(publicKey, username, password);
     }
 }
