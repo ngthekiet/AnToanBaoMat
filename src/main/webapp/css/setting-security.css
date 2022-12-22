@@ -7,7 +7,7 @@ body{
 
 #security-frame{
     width: 80em;
-    height: 30em;
+    height: 34em;
     margin: 2em auto 0em auto;
     border: solid 2px black;
     border-radius: 2em;
@@ -46,4 +46,9 @@ body{
 #open-key, .security-button{
     display: block;
     margin: 10px auto;
+}
+
+#status{
+    text-align: center;
+    margin-top: 20px;
 }

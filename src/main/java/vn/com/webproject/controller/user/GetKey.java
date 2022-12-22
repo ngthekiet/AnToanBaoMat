@@ -13,19 +13,25 @@ import java.util.Base64;
 public class GetKey extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("uid");
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
         RSA rsa = new RSA();
         byte[] dataPublicKey = rsa.getPublicKey().getEncoded();
         byte[] dataPrivateKey = rsa.getPrivateKey().getEncoded();
         String publicKeyString = Base64.getEncoder().encodeToString(dataPublicKey);
         String privateKeyString = Base64.getEncoder().encodeToString(dataPrivateKey);
-        KeyServices.getInstance().changePublicKey(publicKeyString,username);
-        request.setAttribute("yourkey", privateKeyString);
+        if (KeyServices.getInstance().changePublicKey(publicKeyString, username, password) == false) {
+            request.setAttribute("status", "Không thể cấp khóa mới. Vui lòng thử lại!");
+        } else {
+            KeyServices.getInstance().changePublicKey(publicKeyString, username, password);
+            request.setAttribute("yourkey", privateKeyString);
+            request.setAttribute("status", "Cấp khóa mới thành công. Vui lòng lưu lại khóa!");
+        }
         request.getRequestDispatcher("setting-security.jsp").forward(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }
