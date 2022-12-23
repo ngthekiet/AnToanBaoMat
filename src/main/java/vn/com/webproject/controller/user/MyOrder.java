@@ -16,7 +16,6 @@ public class MyOrder extends HttpServlet {
         int uid = Integer.parseInt(request.getParameter("uid"));
         List<ListOrder> myOrders = OrderServices.getInstance().listOrder(uid);
         request.setAttribute("myOrders", myOrders);
-        System.out.println(myOrders.get(0).getImg());
         request.getRequestDispatcher("list-order.jsp").forward(request, response);
     }
 

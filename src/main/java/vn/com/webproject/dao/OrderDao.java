@@ -47,7 +47,7 @@ public class OrderDao {
 
     public List<ListOrder> listOrder(int uid) {
         List<ListOrder> listOrders = JDBIConnector.getJdbi().withHandle(handle ->
-                handle.createQuery("select p.img, p.`name`, d.quantity, p.price, d.`status`,d.orderDetails_id " +
+                handle.createQuery("select p.img, p.`name`, d.quantity, p.price, d.`status`,d.orderDetails_id, o.user_id " +
                                 "from order_details d join orders o on d.order_id=o.order_id join product p on d.product_id = p.product_id " +
                                 "where o.user_id = ?")
                         .bind(0, uid)

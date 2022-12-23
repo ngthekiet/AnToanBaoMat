@@ -43,4 +43,8 @@ public class UserServices {
     public User getByUsername(String username) {
         return UserDao.getInstance().getByUsername(username);
     }
+
+    public void verify(int did){
+        UserDao.getInstance().verify(did);
+    }
 }

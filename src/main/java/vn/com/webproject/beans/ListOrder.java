@@ -8,20 +8,21 @@ public class ListOrder implements Serializable {
     private int quantity;
     private int price;
     private String status;
-
     private int orderDetails_id;
+    private int userID;
 
     public ListOrder() {
 
     }
 
-    public ListOrder(String image, String name, int quantity, int price, String status, int orderDetails_id) {
+    public ListOrder(String image, String name, int quantity, int price, String status, int orderDetails_id, int userID) {
         this.img = image;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
         this.status = status;
         this.orderDetails_id = orderDetails_id;
+        this.userID = userID;
     }
 
     public String getImg() {
@@ -70,5 +71,13 @@ public class ListOrder implements Serializable {
 
     public void setOrderDetails_id(int orderDetails_id) {
         this.orderDetails_id = orderDetails_id;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 }
