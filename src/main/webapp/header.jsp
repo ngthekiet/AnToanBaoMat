@@ -95,9 +95,9 @@
                                  src="images/imgIcons/avatar.png">
                             <ul id="user">
                                 <li class="navbar-list">
-                                    <a class="nav-list-login" href="#">
-                                        <i class="far fa-user"></i>
-                                        <span>My Profile</span>
+                                    <a class="nav-list-login" href="listOrder?uid=${auth.userID}">
+                                        <i class="fas fa-shopping-basket"></i>
+                                        <span>My Orders</span>
                                     </a>
                                 </li>
                                 <c:if test="${auth.role>=1}">
