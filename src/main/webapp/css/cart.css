@@ -1,0 +1,40 @@
+body {
+    margin: 0 auto;
+}
+
+.del-goods-col {
+    text-align: center;
+}
+
+.trash {
+    display: block;
+    margin: 0 auto;
+}
+
+.trash:hover {
+    cursor: pointer;
+}
+
+.shopping-total {
+    margin-top: 50px;
+    border-top: solid 5px blue;
+    border-right: solid 5px yellow;
+    border-bottom: solid 5px red;
+    border-left: solid 5px green;
+    margin-left: 65%;
+    margin-right: 5%;
+}
+
+.link-cart {
+    display: inline-block;
+    margin: 0 auto;
+    width: 45%;
+    line-height: 1.8em;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+#shopping-cart{
+    min-height: 500px;
+}

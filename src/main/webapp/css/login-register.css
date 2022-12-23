@@ -1,0 +1,121 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow-x: hidden;
+    background-image: url("../images/imgLogo/bg.jpg");
+    background-size: cover;
+    background-repeat: inherit;
+}
+
+#frame {
+    width: 100%;
+}
+
+#container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#login {
+    width: 100%;
+    margin-top: 5%;
+}
+
+#container-login {
+    width: 45%;
+    margin: 0 auto;
+    border-radius: 0.625em;
+    background-color: white;
+    text-align: center;
+}
+
+#dangnhap {
+    color: #7d6666;
+}
+
+#dangnhap h4 {
+    margin: 0;
+    padding: 2% 0 0 0;
+}
+
+#nameshop {
+    width: 100%;
+}
+
+#nameshop h4 {
+    font-size: 120%;
+    margin: 0;
+    padding: 4% 0 5% 0;
+}
+
+.input {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    display: flex;
+}
+
+.icons {
+    font-size: 150%;
+    padding-right: 5%;
+}
+
+.input input {
+    width: 100%;
+    font-size: 110%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 4%;
+    border-bottom: solid 2px #dbdbdb;
+}
+
+.input input:focus {
+    border-bottom: solid 2px chartreuse;
+}
+
+.login-register {
+    width: 100%;
+}
+
+.login-register a {
+    text-decoration: none;
+    color: #056bd3;
+}
+
+.login-register a:hover {
+    text-decoration: underline 1px;
+    color: tomato;
+}
+
+#button {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+}
+
+#button input {
+    display: block;
+    width: 100%;
+    height: 3em;
+    border-radius: 0.625em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    background-color: tomato;
+}
+
+#button input:hover {
+    cursor: pointer;
+    color: #1f8cfe;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    #container-login {
+        width: 80%;
+    }
+}
