@@ -1,13 +1,13 @@
 package vn.com.webproject.dao;
 
-import vn.com.webproject.beans.Product;
+import vn.com.webproject.beans.ListOrder;
 import vn.com.webproject.beans.User;
 import vn.com.webproject.db.JDBIConnector;
+import vn.com.webproject.model.Hash;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.PublicKey;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -120,6 +120,28 @@ public class UserDao {
     public User getByUsername(String username) {
         return JDBIConnector.getJdbi().withHandle(handle -> {
             return handle.createQuery("select * from user where username = ?").bind(0, username).mapToBean(User.class).first();
+        });
+    }
+
+    public void verify(int did) {
+        List<ListOrder> listOrders = JDBIConnector.getJdbi().withHandle(handle ->
+                handle.createQuery("select p.img, p.`name`, d.quantity, p.price, d.`status`, d.orderDetails_id, o.user_id " +
+                                "from order_details d join orders o on d.order_id=o.order_id join product p on d.product_id = p.product_id " +
+                                "where d.orderDetails_id = ?")
+                        .bind(0, did)
+                        .mapToBean(ListOrder.class)
+                        .stream()
+                        .collect(Collectors.toList())
+        );
+        ListOrder details = listOrders.get(0);
+        System.out.println(details.getUserID());
+        String strHash = details.getImg() + details.getName() + details.getQuantity() + details.getPrice();
+        Hash hash = new Hash();
+        JDBIConnector.getJdbi().withHandle(handle -> {
+            return handle.createUpdate("update order_details set info = ? where orderDetails_id = ?")
+                    .bind(0, hash.hashText(strHash))
+                    .bind(1, did)
+                    .execute();
         });
     }
 }

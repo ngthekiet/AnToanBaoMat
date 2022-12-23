@@ -8,19 +8,21 @@ public class OrderDetail {
     private List<Order> orders;
     private int product_id;
     private int quantity;
-    private String note;
+    private String info;
+    private String status;
     private Date createAt;
     private Date updateAt;
 
     public OrderDetail() {
     }
 
-    public OrderDetail(int orderDetail_id, List<Order> orders, int product_id, int quantity, String note, Date createAt, Date updateAt) {
+    public OrderDetail(int orderDetail_id, List<Order> orders, int product_id, int quantity, String info, String status, Date createAt, Date updateAt) {
         this.orderDetail_id = orderDetail_id;
         this.orders = orders;
         this.product_id = product_id;
         this.quantity = quantity;
-        this.note = note;
+        this.info = info;
+        this.status = status;
         this.createAt = createAt;
         this.updateAt = updateAt;
     }
@@ -57,12 +59,12 @@ public class OrderDetail {
         this.quantity = quantity;
     }
 
-    public String getNote() {
-        return note;
+    public String getStatus() {
+        return status;
     }
 
-    public void setNote(String note) {
-        this.note = note;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Date getCreateAt() {
@@ -79,5 +81,13 @@ public class OrderDetail {
 
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 }
