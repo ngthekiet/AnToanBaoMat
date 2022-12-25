@@ -1,9 +1,9 @@
 package vn.com.webproject.services;
 
+import vn.com.webproject.beans.ListOrder;
 import vn.com.webproject.beans.User;
 import vn.com.webproject.dao.UserDao;
 
-import java.security.PublicKey;
 import java.util.List;
 
 public class UserServices {
@@ -44,7 +44,12 @@ public class UserServices {
         return UserDao.getInstance().getByUsername(username);
     }
 
-    public void verify(int did){
-        UserDao.getInstance().verify(did);
+    public void saveHash(int did){
+        UserDao.getInstance().saveHash(did);
+    }
+
+
+    public ListOrder verify(int did) {
+        return UserDao.getInstance().verify(did);
     }
 }

@@ -1,5 +1,6 @@
 package vn.com.webproject.controller.user;
 
+import vn.com.webproject.beans.ListOrder;
 import vn.com.webproject.services.UserServices;
 
 import javax.servlet.*;
@@ -12,8 +13,12 @@ public class Verify extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int did = Integer.parseInt(request.getParameter("did"));
-        UserServices.getInstance().verify(did);
-        response.sendRedirect("setting-security.jsp");
+        UserServices.getInstance().saveHash(did);
+        ListOrder infoOrder = UserServices.getInstance().verify(did);
+        request.setAttribute("infoOrder", infoOrder);
+        request.getRequestDispatcher("verify.jsp").forward(request, response);
+
+
     }
 
     @Override
