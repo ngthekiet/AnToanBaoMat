@@ -123,7 +123,7 @@ public class UserDao {
         });
     }
 
-    public void verify(int did) {
+    public void saveHash(int did) {
         List<ListOrder> listOrders = JDBIConnector.getJdbi().withHandle(handle ->
                 handle.createQuery("select p.img, p.`name`, d.quantity, p.price, d.`status`, d.orderDetails_id, o.user_id " +
                                 "from order_details d join orders o on d.order_id=o.order_id join product p on d.product_id = p.product_id " +
@@ -143,5 +143,17 @@ public class UserDao {
                     .bind(1, did)
                     .execute();
         });
+    }
+    public ListOrder verify(int did) {
+        List<ListOrder> listOrders = JDBIConnector.getJdbi().withHandle(handle ->
+                handle.createQuery("select p.img, p.`name`, d.quantity, p.price, d.`status`, d.orderDetails_id, o.user_id " +
+                                "from order_details d join orders o on d.order_id=o.order_id join product p on d.product_id = p.product_id " +
+                                "where d.orderDetails_id = ?")
+                        .bind(0, did)
+                        .mapToBean(ListOrder.class)
+                        .stream()
+                        .collect(Collectors.toList())
+        );
+        return listOrders.get(0);
     }
 }
