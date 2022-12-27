@@ -6,6 +6,9 @@
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
 %>
+<%
+    String status = (String) request.getAttribute("status");
+%>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -32,6 +35,7 @@
         <th style="text-align: center">Price</th>
         <th style="text-align: center">Number Details</th>
         <th style="text-align: center">ID User</th>
+        <th style="text-align: center">Status</th>
     </tr>
     </thead>
     <tbody>
@@ -54,6 +58,9 @@
         <td style="text-align: center" class="del-goods-col">
             ${infoOrder.userID}
         </td>
+        <td style="text-align: center" class="del-goods-col">
+            ${infoOrder.status}
+        </td>
     </tr>
     </tbody>
     <tfoot>
@@ -68,6 +75,16 @@
         <button id="submit" type="submit">Xác thực</button>
     </form>
 </div>
+<div id="status">
+    Status:
+    <%
+        if (status != null) {
+    %>
+    <%=status%>
+    <%
+        }
+    %>
+</div>
 <jsp:include page="footer.jsp"/>
 <script>
     var dt;
@@ -79,6 +96,7 @@
             info: false
         });
     });
+
     function chooseFile(fileInput) {
         if (fileInput.files && fileInput.files[0]) {
             var reader = new FileReader();

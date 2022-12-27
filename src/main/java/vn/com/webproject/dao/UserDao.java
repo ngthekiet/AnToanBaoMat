@@ -134,7 +134,6 @@ public class UserDao {
                         .collect(Collectors.toList())
         );
         ListOrder details = listOrders.get(0);
-        System.out.println(details.getUserID());
         String strHash = details.getImg() + details.getName() + details.getQuantity() + details.getPrice();
         Hash hash = new Hash();
         JDBIConnector.getJdbi().withHandle(handle -> {

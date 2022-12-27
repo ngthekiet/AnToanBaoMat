@@ -17,8 +17,6 @@ public class Verify extends HttpServlet {
         ListOrder infoOrder = UserServices.getInstance().verify(did);
         request.setAttribute("infoOrder", infoOrder);
         request.getRequestDispatcher("verify.jsp").forward(request, response);
-
-
     }
 
     @Override

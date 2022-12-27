@@ -93,6 +93,7 @@ public class KeyDao {
             return null;
         }
     }
+
     public boolean doVerify(PrivateKey privateKey, int uid, int did) {
         List<User> users = JDBIConnector.getJdbi().withHandle(handle ->
                 handle.createQuery("SELECT * FROM user WHERE userID =?")
@@ -115,10 +116,19 @@ public class KeyDao {
 
         User user = users.get(0);
         String stringPub = user.getPublicKey();
+        if (stringPub == null) {
+            return false;
+        }
         PublicKey publicKey = RSA.getInstance().stringToPublicKey(stringPub);
 
         try {
             if (RSA.getInstance().decrypt(RSA.getInstance().encrypt(info, privateKey), publicKey).equals(info)) {
+                JDBIConnector.getJdbi().withHandle(handle -> {
+                    return handle.createUpdate("update order_details set status = ? where orderDetails_id = ?")
+                            .bind(0, "Verified")
+                            .bind(1, did)
+                            .execute();
+                });
                 return true;
             } else {
                 return false;
