@@ -1,6 +1,7 @@
 package vn.com.webproject.controller.user;
 
 import vn.com.webproject.model.RSA;
+import vn.com.webproject.services.KeyServices;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -21,6 +22,13 @@ public class DoVerify extends HttpServlet {
         int uid = Integer.parseInt(request.getParameter("uid"));
         int did = Integer.parseInt(request.getParameter("did"));
         PrivateKey privateKey = RSA.getInstance().stringToPrivateKey(key);
-        System.out.println(privateKey);
+        if(KeyServices.getInstance().doVerify(privateKey, uid, did)==true){
+            KeyServices.getInstance().doVerify(privateKey, uid, did);
+            request.setAttribute("status", "Xác thực thành công");
+            System.out.println("thanh cong");
+        }else{
+            request.setAttribute("status", "Xác thực thất bại vui lòng kiểm tra lại khóa");
+            System.out.println("that bai");
+        }
     }
 }
