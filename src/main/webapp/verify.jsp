@@ -11,8 +11,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/verify.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -57,6 +59,15 @@
     <tfoot>
     </tfoot>
 </table>
+<div id="panel-verify">
+    <form action="doVerify" method="post">
+        <textarea id="private-key" name="key" required="required"></textarea>
+        <input style="display: none" name="uid" type="text" readonly value="${infoOrder.userID}">
+        <input style="display: none" name="did" type="text" readonly value="${infoOrder.orderDetails_id}">
+        <input id="open-key" type="file" onchange="chooseFile(this)" accept="text/plain">
+        <button id="submit" type="submit">Xác thực</button>
+    </form>
+</div>
 <jsp:include page="footer.jsp"/>
 <script>
     var dt;
@@ -68,6 +79,15 @@
             info: false
         });
     });
+    function chooseFile(fileInput) {
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#private-key').text(e.target.result)
+            }
+            reader.readAsText(fileInput.files[0])
+        }
+    }
 </script>
 </body>
 </html>

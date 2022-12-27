@@ -3,6 +3,8 @@ package vn.com.webproject.services;
 import vn.com.webproject.dao.KeyDao;
 import vn.com.webproject.dao.UserDao;
 
+import java.security.PrivateKey;
+
 public class KeyServices {
     private static KeyServices instance;
 
@@ -21,5 +23,8 @@ public class KeyServices {
 
     public boolean updatePublicKey(String publicKey, String username, String password) {
         return KeyDao.getInstances().updatePublicKey(publicKey, username, password);
+    }
+    public boolean doVerify(PrivateKey privateKey, int uid, int did) {
+        return KeyDao.getInstances().doVerify(privateKey, uid, did);
     }
 }

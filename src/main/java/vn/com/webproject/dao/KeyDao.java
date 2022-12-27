@@ -6,6 +6,7 @@ import vn.com.webproject.db.JDBIConnector;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -88,5 +89,8 @@ public class KeyDao {
         } catch (NoSuchAlgorithmException e) {
             return null;
         }
+    }
+    public boolean doVerify(PrivateKey privateKey, int uid, int did) {
+      return true;
     }
 }
