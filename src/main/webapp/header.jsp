@@ -97,7 +97,7 @@
                                 <li class="navbar-list">
                                     <a class="nav-list-login" href="listOrder?uid=${auth.userID}">
                                         <i class="fas fa-shopping-basket"></i>
-                                        <span>My Orders</span>
+                                        <span>Đơn hàng</span>
                                     </a>
                                 </li>
                                 <c:if test="${auth.role>=1}">

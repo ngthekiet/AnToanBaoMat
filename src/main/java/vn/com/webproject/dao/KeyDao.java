@@ -1,11 +1,15 @@
 package vn.com.webproject.dao;
 
+import vn.com.webproject.beans.DetailsInfo;
 import vn.com.webproject.beans.User;
 import vn.com.webproject.db.JDBIConnector;
+import vn.com.webproject.model.RSA;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -87,6 +91,40 @@ public class KeyDao {
             return bigInteger.toString(16);
         } catch (NoSuchAlgorithmException e) {
             return null;
+        }
+    }
+    public boolean doVerify(PrivateKey privateKey, int uid, int did) {
+        List<User> users = JDBIConnector.getJdbi().withHandle(handle ->
+                handle.createQuery("SELECT * FROM user WHERE userID =?")
+                        .bind(0, uid)
+                        .mapToBean(User.class)
+                        .stream()
+                        .collect(Collectors.toList())
+        );
+
+        List<DetailsInfo> detailsInfos = JDBIConnector.getJdbi().withHandle(handle ->
+                handle.createQuery("SELECT info FROM order_details WHERE orderDetails_id =?")
+                        .bind(0, did)
+                        .mapToBean(DetailsInfo.class)
+                        .stream()
+                        .collect(Collectors.toList())
+        );
+
+        DetailsInfo detailsInfo = detailsInfos.get(0);
+        String info = detailsInfo.getInfo();
+
+        User user = users.get(0);
+        String stringPub = user.getPublicKey();
+        PublicKey publicKey = RSA.getInstance().stringToPublicKey(stringPub);
+
+        try {
+            if (RSA.getInstance().decrypt(RSA.getInstance().encrypt(info, privateKey), publicKey).equals(info)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            return false;
         }
     }
 }
