@@ -53,9 +53,7 @@
                     ${orders.status}
             </td>
             <td style="text-align: center" class="del-goods-col">
-                <a href="verify?did=${orders.orderDetails_id}">Xác thực</a>
-                <span>&emsp;</span>
-                <button>IN</button>
+                <a href="verify?did=${orders.orderDetails_id}">Xem & Xác thực</a>
             </td>
         </tr>
     </c:forEach>

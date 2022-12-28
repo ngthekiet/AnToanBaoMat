@@ -33,11 +33,12 @@ public class OrderDao {
         int total = JDBIConnector.getJdbi().withHandle(handle -> {
             int sum = 0;
             for (Product product : cart.getProductList()) {
-                sum += handle.createUpdate("INSERT  INTO order_details(order_id, product_id,quantity,note) VALUES(?,?,?,?) ")
+                sum += handle.createUpdate("INSERT  INTO order_details(order_id, product_id,quantity,info,status) VALUES(?,?,?,?,?) ")
                         .bind(0, orderId)
                         .bind(1, product.getProduct_id())
                         .bind(2, product.getQuantitySold())
                         .bind(3, "")
+                        .bind(4, "Unconfirmed")
                         .execute();
             }
             return sum;
